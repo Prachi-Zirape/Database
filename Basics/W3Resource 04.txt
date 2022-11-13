@@ -1,0 +1,137 @@
+1. select sum(purch_amt) from orders
+
+2. select avg(purch_amt) from orders
+
+3. select count(distinct(salesman_id)) from orders
+
+4. select count(customer_id) from customer
+
+5. select count(customer_id) from customer
+   where grade is not NULL
+
+  select count(ALL(grade)) from customer
+
+6. select max(purch_amt) from orders
+
+7. select min(purch_amt) from orders
+
+8. select city, max(grade) from customer
+    group by city
+
+9. select custmer_id, max(purch_amt) from orders
+   goup by customer_id
+  order by customer_id
+
+10. select customer_id, ord_date, max(purch_amt) from orders
+    group by customer_id, ord_date 
+   order by customer_id
+
+11. select salesman_id, max(purch_amt) from orders 
+       where ord_date="2012-08-17"
+       Goup by salesman_id
+
+12. select customer_id, ord_date, max(purch_amt) from orders
+     group by customer_id, ord_date
+     having max(purch_amt)>2000
+
+13. select customer_id, ord_date, max(purch_amt) from orders
+      group by  customer_id, ord_date
+     having max(purch_amt) between 2000 and 6000
+
+14. select customer_id, order_date, max(purch_amt) from orders
+       group by customer_id, order_date
+      having max(purch_amt) in(2000,3000,5760, 6000)
+
+15.  select customer_id, max(purch_amt) from orders
+        group by customer_id
+        having customer_id between 3002 and 3007
+
+16. select customer_id, max(purch_amt) from orders
+       where customer_id between 3002 and 3007
+       group by customer_id
+       having max(purch_amt) >1000
+    
+17. select salesman_id, max(purch_amt) from orders     
+     group by salesman_id
+      Having salesman_id between 5003 and 5008
+
+18. select count(ord_no) from orders 
+       where ord_date="2012-08-17"
+
+19. select count(salesman_id) from salesman
+      where city is not null
+
+20. select count(ord_no), ord_date, salesman_id from orders
+      group by ord_date, salesman_id
+
+21. select avg(prod_price)  from item_mast
+
+22.  select count(pro_id) from item_mast
+      where pro_price>=350
+
+23. select avg(pro_price) as "Average Price" , pro_com as 	       "company_id"  from item_mast
+       group by pro_com
+
+24. select sum(dpt_allotment) from emp_department
+
+25. select count(emp_idno), emp_dept from emp_details
+      group by emp_dept 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
